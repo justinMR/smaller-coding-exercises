@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El</title>
+    <style>
+        #box {
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+        // el: element node object
+        // moves the element to the right by 100px over a duration of 1 second
+        function animateRight(el) {
+            const box = document.getElementById(el);
+
+            const animation = [
+                { transform: 'translate()' },
+                { transform: 'translateX(100px)' }
+            ];
+
+            const animationOptions = {
+                duration: 1000,
+                iterations: 1,
+                fill: 'forwards'
+            }
+
+            box.animate(animation, animationOptions)
+        }
+
+        animateRight('box');
+    </script>
+</body>
+
+</html>

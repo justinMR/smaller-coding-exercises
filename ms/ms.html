@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS</title>
+</head>
+
+<body>
+    <h3>See console</h3>
+    <h4>Just wait for it 😎</h4>
+    <script>
+        // ms: number of milliseconds
+        // returns a Promise that is resolved after ms milliseconds
+        async function delay(ms) {
+            const result = await new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(`hello in ${ms} milliseconds`)
+                }, ms)
+            });
+            console.log(result);
+            return result
+        }
+
+        delay(3000);
+    </script>
+</body>
+
+</html>
